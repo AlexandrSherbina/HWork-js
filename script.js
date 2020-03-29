@@ -12,45 +12,53 @@ let appData = {
     savings: false
 };
 //1-й способ
-//    for (let i = 0; i < 2; i++) {
-//       let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
-//           b = prompt('“Во сколько обойдется?”', '');
-    
-//     if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
-//     && a != '' && b != '' && a.length < 50) {
-//         console.log('done');
-//         appData.expenses[a] = b;
-//       }  else {
-//       }
-//    };
+   for (let i = 0; i < 2; i++) {
+       let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
+           b = prompt('“Во сколько обойдется?”', '');
+
+       if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
+           a != '' && b != '' && a.length < 50) {
+           console.log('done');
+           appData.expenses[a] = b;
+       } else {
+           console.log('bad result');
+           i--;
+       }
+   };
 //2-й способ 
 // let i = 0;
-// let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
-//     b = prompt('“Во сколько обойдется?”', '');
-
 // while (i < 2) { 
-//     if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
+//    let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
+//         b = prompt('“Во сколько обойдется?”', '');
+
+//         if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
 //         && a != '' && b != '' && a.length < 50) {
 //             console.log('done');
 //             appData.expenses[a] = b;
-//             i++;
+
 //           }  else {
+//                  console.log('bad result');
+//                  i--;
 //           }
+//              i++;
 // };
 //3-й способ 
-let i = 0;
-let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
-    b = prompt('“Во сколько обойдется?”', '');
+// let i = 0;
+//     do { 
+//         let a = prompt('“Введите обязательную статью расходов в этом месяце”', ''),
+//             b = prompt('“Во сколько обойдется?”', '');
 
-    do { 
-        if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
-                && a != '' && b != '' && a.length < 50) {
-                    console.log('done');
-                    appData.expenses[a] = b;
-                    i++;
-                  }  else {
-                           }
-        } while (i < 2);
+//         if ((typeof(a))=== 'string' && (typeof(a)) != null && (typeof(b)) != null
+//                 && a != '' && b != '' && a.length < 50) {
+//                     console.log('done');
+//                     appData.expenses[a] = b;
+
+//                   }  else {
+//                       console.log('bad result');
+//                       i--;
+//                            }
+//                      i++;
+//         } while (i < 2);
 
 
    appData.moneyPerDay = appData.budjet / 30;
